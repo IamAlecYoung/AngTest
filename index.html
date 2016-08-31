@@ -7,13 +7,14 @@
 
 <body>
   <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular/angular-locale_uk.js"></script>
   <script type="text/javascript" src="app.js"></script>
 
     <div ng-controller="StoreController as store">
       <div ng-repeat="product in store.products">
         <div ng-hide="product.soldOut">
           <h1>{{product.name}}</h1>
-          <h2>${{product.price}}</h2>
+          <h2>{{product.price | currency}}</h2>
           <p>{{product.description}}</p>
           <button ng-show="store.product.canShow">Buy Me</button>
           <hr>
@@ -21,6 +22,6 @@
       </div>
     </div>
 
-    
+
 </body>
 </html>
