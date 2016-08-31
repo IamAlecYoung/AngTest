@@ -11,11 +11,12 @@
   <script type="text/javascript" src="app.js"></script>
 
     <div ng-controller="StoreController as store">
-      <div ng-repeat="product in store.products">
+      <div ng-repeat="product in store.products | orderBy:'name'">
         <div ng-hide="product.soldOut">
           <h1>{{product.name}}</h1>
           <h2>{{product.price | currency}}</h2>
           <p>{{product.description}}</p>
+          <img ng-src="{{product.image[0]}}" />
           <button ng-show="store.product.canShow">Buy Me</button>
           <hr>
         </div>

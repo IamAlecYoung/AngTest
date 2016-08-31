@@ -13,6 +13,9 @@
         description: '. . .',
         canShow: false,
         soldOut: false,
+        image:  [
+                  'image/gem-01.gif',
+                ]
     },
     {
         name: 'Pentagonal Gem',
@@ -20,6 +23,9 @@
         description: '. . .',
         canShow: true,
         soldOut: false,
+        image:    [
+                    'image/gem-02.gif',
+                  ]
     }
   ]
 })();
